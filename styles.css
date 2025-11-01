@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color:#f3f8fcc5;
+    color: #333;
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #083b75, #0c4b8f);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #d1d5db;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -42px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #083b75;
+    border: 2px solid #fff;
+}
+
+/* Skill Bars */
+.skill-bar {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #083b75, #0c4b8f);
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Download Button */
+.btn-download {
+    background: linear-gradient(90deg, #083b75, #0c4b8f);
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(8, 59, 117, 0.2), 0 4px 6px -2px rgba(8, 59, 117, 0.1);
+}
+
+/* Project Card Hover */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(8, 59, 117, 0.15), 0 10px 10px -5px rgba(8, 59, 117, 0.1);
+}
+
+/* Progress Animation */
+.animate-progress {
+    animation: animateProgress 2s ease-in-out forwards;
+}
+
+@keyframes animateProgress {
+    from { width: 0; }
+    to { width: var(--progress); }
+}
+
+/* Icons (reduce size slightly if oversized) */
+svg, i {
+    max-height: 18px;
+    max-width: 18px;
+}
+
+/* Optional enhancement for shadow elements */
+.shadow-md, .shadow-lg, .shadow-xl {
+    box-shadow: 0 10px 15px -3px rgba(8, 59, 117, 0.1), 0 4px 6px -2px rgba(8, 59, 117, 0.05);
+}
+
+/* Scrollbar styling (optional aesthetic) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #083b75;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f3f8fc;
+}
